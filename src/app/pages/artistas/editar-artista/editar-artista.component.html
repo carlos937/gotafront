@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Editar Artista</h4>
+</div>
+<div class="modal-body" [formGroup]="form">
+  <div class="row">
+    <div class="col">
+      <label>Nome</label>
+      <input class="form-control" formControlName="nome" type="text">
+    </div>
+    <div class="col">
+      <label>Celular</label>
+      <input class="form-control" formControlName="celular" type="text">
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Atuação</label>
+      <input class="form-control" formControlName="atuacao" type="text">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+  <button type="button" class="btn btn-outline-dark" (click)="Enviar()">Save</button>
+</div>

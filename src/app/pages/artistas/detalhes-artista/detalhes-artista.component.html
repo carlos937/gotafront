@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Detalhes</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <label>Nome</label>
+      <label class="w-100 text-success" >{{artista.nome}}</label>
+    </div>
+    <div class="col">
+      <label>Celular</label>
+      <label class="w-100 text-success" >{{artista.celular}}</label>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Atuação</label>
+      <label class="w-100 text-success" >{{artista.atuacao}}</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+</div>

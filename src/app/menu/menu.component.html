@@ -1,0 +1,50 @@
+
+<nav class="navbar navbar-dark bg-primary navgota">
+  <div class="container-fluid">
+    <a class="navbar-brand"><img src="../../assets/logo.png" style="width: 50px;" alt=""></a>
+    <form class="d-flex" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light ml-2" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container containergota">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a (click)="inicio()"
+        class="nav-link active"
+        aria-current="page"
+        data-toggle="tab"
+        href="#inicio"
+        >Inicio</a
+      >
+    </li>
+    <li class="nav-item">
+      <a (click)="artistas()" class="nav-link" data-toggle="tab"  href="#artistas">Artistas</a>
+    </li>
+    <li class="nav-item">
+      <a (click)="projetos()" class="nav-link" data-toggle="tab" href="#projetos">Projetos</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="inicio" class="conteudo p-2 tab-pane active">
+      <home></home>
+    </div>
+    <div id="artistas" class="conteudo p-4 tab-pane fade">
+      <artistas></artistas>
+    </div>
+    <div id="projetos" class="conteudo p-2 tab-pane fade">
+      <br />
+      <h3>Menu 2</h3>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam.
+      </p>
+    </div>
+  </div>
+</div>

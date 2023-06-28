@@ -1,0 +1,34 @@
+
+<ng-template #novoArtista >
+ <novo-artista (novo)="buscar()"></novo-artista>
+</ng-template>
+<ng-template #editarArtista >
+  <editar-artista (editado)="buscar()" [artista]="artistaSelecionado"></editar-artista>
+ </ng-template>
+ <ng-template #detalhesArtista >
+  <detalhes-artista [artista]="artistaSelecionado"></detalhes-artista>
+ </ng-template>
+<button class="btn btn-primary" (click)="open(novoArtista)">Novo artista</button>
+<table class="table mt-2 table-striped w-100">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Atuação</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of artistas">
+      <td>{{item.id}}</td>
+      <td>{{item.nome}}</td>
+      <td>{{item.celular}}</td>
+      <td>{{item.atuacao}}</td>
+      <td><button class="btn btn-success" (click)="detalhes(item,detalhesArtista)">Detalhes</button></td>
+      <td><button class="btn btn-primary" (click)="editar(item,editarArtista)">Editar</button></td>
+      <td><button class="btn btn-danger" (click)="excluir(item.id)">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>
