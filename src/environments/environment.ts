@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backUrl:"http://coletivogota.com.br/backend/api/"
+  // backUrl:"http://coletivogota.com.br/backend/api/"
+  backUrl:"https://localhost:7120/api/"
 };
 
 /*

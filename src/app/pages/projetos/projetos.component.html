@@ -1,0 +1,46 @@
+<ng-template #novoModal>
+  <novo-projeto (novo)="buscar()"></novo-projeto>
+</ng-template>
+<ng-template #editarModal>
+  <editar-projeto
+    (editado)="buscar()"
+    [itemSelecionado]="itemSelecionado"
+  ></editar-projeto>
+</ng-template>
+<ng-template #detalheModal>
+  <detalhes-projeto [itemSelecionado]="itemSelecionado"></detalhes-projeto>
+</ng-template>
+<button class="btn btn-primary" (click)="open(novoModal)">Novo projeto</button>
+<table class="table mt-2 table-striped w-100">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Descricao</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of projetos">
+      <td>{{ item.id }}</td>
+      <td>{{ item.nome }}</td>
+      <td>{{ item.descricao }}</td>
+      <td>
+        <button class="btn btn-success" (click)="detalhes(item, detalheModal)">
+          Detalhes
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="editar(item, editarModal)">
+          Editar
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="excluir(item.id)">
+          Excluir
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

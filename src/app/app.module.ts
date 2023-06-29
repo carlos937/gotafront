@@ -13,6 +13,10 @@ import { EditarArtistaComponent } from './pages/artistas/editar-artista/editar-a
 import { DetalhesArtistaComponent } from './pages/artistas/detalhes-artista/detalhes-artista.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { ProjetosComponent } from './pages/projetos/projetos.component';
+import { NovoProjetoComponent } from './pages/projetos/novo-projeto/novo-projeto.component';
+import { EditarProjetoComponent } from './pages/projetos/editar-projeto/editar-projeto.component';
+import { DetalhesProjetoComponent } from './pages/projetos/detalhes-projeto/detalhes-projeto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { LoadingComponent } from './shared/loading/loading.component';
     NovoArtistaComponent,
     EditarArtistaComponent,
     DetalhesArtistaComponent,
-    LoadingComponent
+    LoadingComponent,
+    ProjetosComponent,
+    NovoProjetoComponent,
+    EditarProjetoComponent,
+    DetalhesProjetoComponent
   ],
   imports: [
     BrowserModule,
