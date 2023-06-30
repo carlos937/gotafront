@@ -12,6 +12,12 @@
       <label class="w-100 text-success" >{{itemSelecionado.descricao}}</label>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <label>Artistas</label>
+      <label class="w-100 text-success" *ngFor="let artista of artistasSelecionados" >{{artista.nome}}</label>
+    </div>
+  </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>

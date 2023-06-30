@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoadingService } from 'src/app/shared/loading/loading.service';
@@ -10,10 +10,12 @@ import { ProjetoService } from '../../services/projetos/projeto.service';
   styleUrls: ['./novo-projeto.component.scss']
 })
 export class NovoProjetoComponent {
+  @Input() artistas: any[]  = [];
   form = new FormGroup({
     id: new FormControl(''),
     nome: new FormControl('') ,
-    descricao: new FormControl('')
+    descricao: new FormControl(''),
+    artistasId: new FormControl([])
   });
   @Output() novo = new EventEmitter();
   constructor(

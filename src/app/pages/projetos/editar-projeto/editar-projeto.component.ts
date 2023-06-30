@@ -11,6 +11,7 @@ import { ProjetoService } from '../../services/projetos/projeto.service';
 })
 export class EditarProjetoComponent {
   @Input() itemSelecionado: any;
+  @Input() artistas: any[]  = [];
   form: any;
   @Output() editado = new EventEmitter();
   constructor(
@@ -24,6 +25,7 @@ export class EditarProjetoComponent {
       id: new FormControl(this.itemSelecionado.id),
       nome: new FormControl(this.itemSelecionado.nome),
       descricao: new FormControl(this.itemSelecionado.descricao),
+      artistasId: new FormControl(this.itemSelecionado.artistasId? this.itemSelecionado.artistasId : [])
     });
   }
 

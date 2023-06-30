@@ -17,7 +17,7 @@ import { ProjetosComponent } from './pages/projetos/projetos.component';
 import { NovoProjetoComponent } from './pages/projetos/novo-projeto/novo-projeto.component';
 import { EditarProjetoComponent } from './pages/projetos/editar-projeto/editar-projeto.component';
 import { DetalhesProjetoComponent } from './pages/projetos/detalhes-projeto/detalhes-projeto.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +40,8 @@ import { DetalhesProjetoComponent } from './pages/projetos/detalhes-projeto/deta
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

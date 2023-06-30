@@ -1,14 +1,15 @@
 <ng-template #novoModal>
-  <novo-projeto (novo)="buscar()"></novo-projeto>
+  <novo-projeto   [artistas]="artistas" (novo)="buscar()"></novo-projeto>
 </ng-template>
 <ng-template #editarModal>
   <editar-projeto
     (editado)="buscar()"
+    [artistas]="artistas"
     [itemSelecionado]="itemSelecionado"
   ></editar-projeto>
 </ng-template>
 <ng-template #detalheModal>
-  <detalhes-projeto [itemSelecionado]="itemSelecionado"></detalhes-projeto>
+  <detalhes-projeto   [artistas]="artistas"  [itemSelecionado]="itemSelecionado"></detalhes-projeto>
 </ng-template>
 <button class="btn btn-primary" (click)="open(novoModal)">Novo projeto</button>
 <table class="table mt-2 table-striped w-100">

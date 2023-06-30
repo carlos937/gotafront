@@ -22,9 +22,9 @@ export class ProjetoService {
     );
   }
 
-  public excluir(id:string): Observable<any>  {
+  public excluir(id:string,arquivar:boolean): Observable<any>  {
     return this.http.delete(
-      environment.backUrl + 'projeto?id='+id,
+      environment.backUrl + 'projeto?id='+id+'&arquivar='+arquivar,
       this.createHeader('application/json')
     );
   }

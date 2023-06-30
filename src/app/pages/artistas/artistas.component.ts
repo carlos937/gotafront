@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { ArtistaService } from "../services/artistas/artista.service";
 import { LoadingService } from "src/app/shared/loading/loading.service";
+import Swal from "sweetalert2";
 
 @Component({
   selector: "artistas",
@@ -44,11 +45,21 @@ export class ArtistasComponent implements OnInit {
   }
 
   async excluir(id:any){
-    this.loadingService.show();
-    this.service.excluir(id).subscribe(res => {
-      alert(res.mensagem);
-      this.loadingService.hide();
-      this.buscar();
-    });
+    Swal.fire({
+      title: 'O que voce deseja fazer?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Arquivar',
+      denyButtonText: `Deletar`,
+    }).then((result) => {
+       if (!result.dismiss){
+        this.loadingService.show();
+        this.service.excluir(id,result.isConfirmed).subscribe((res:any) => {
+          alert(res.mensagem);
+          this.loadingService.hide();
+          this.buscar();
+        });
+       }
+    })
   }
 }

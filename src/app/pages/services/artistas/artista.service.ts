@@ -22,9 +22,9 @@ export class ArtistaService {
     );
   }
 
-  public excluir(id:string): Observable<any>  {
+  public excluir(id:string,arquivar:boolean): Observable<any>  {
     return this.http.delete(
-      environment.backUrl + 'artista?id='+id,
+      environment.backUrl + 'artista?id='+id+'&arquivar='+arquivar,
       this.createHeader('application/json')
     );
   }

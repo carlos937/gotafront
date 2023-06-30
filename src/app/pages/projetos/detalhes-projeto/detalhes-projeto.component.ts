@@ -8,11 +8,17 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class DetalhesProjetoComponent {
   @Input() itemSelecionado: any;
+  @Input() artistas: any[] = [];
+  artistasSelecionados: any[] = [];
 
   constructor(public modalService: NgbModal) { }
 
   ngOnInit() {
+    this.itemSelecionado.artistasId.map((aId:any) => {
+      this.artistasSelecionados.push(this.artistas.find(a => a.id ==  aId));
+    });
   }
+
   close(){
     this.modalService.dismissAll();
   }

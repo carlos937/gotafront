@@ -13,6 +13,13 @@
     </div>
 
   </div>
+  <div class="row">
+    <div class="col mt-2">
+      <select class="form-control select" formControlName="artistasId" multiple>
+        <option [value]="artista.id" *ngFor="let artista of artistas">{{artista.nome}}</option>
+      </select>
+    </div>
+  </div>
 
 </div>
 <div class="modal-footer">
