@@ -18,6 +18,14 @@ import { NovoProjetoComponent } from './pages/projetos/novo-projeto/novo-projeto
 import { EditarProjetoComponent } from './pages/projetos/editar-projeto/editar-projeto.component';
 import { DetalhesProjetoComponent } from './pages/projetos/detalhes-projeto/detalhes-projeto.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { ProdutosComponent } from './pages/produtos/produtos.component';
+import { NovoProdutoComponent } from './pages/produtos/novo-produto/novo-produto.component';
+import { EditarProdutoComponent } from './pages/produtos/editar-produto/editar-produto.component';
+import { DetalhesProdutosComponent } from './pages/produtos/detalhes-produtos/detalhes-produtos.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
+import { EditarSobreComponent } from './pages/sobre/editar-sobre/editar-sobre.component';
+import { ContatoComponent } from './pages/contato/contato.component';
+import { EditarContatoComponent } from './pages/contato/editar-contato/editar-contato.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +40,15 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     ProjetosComponent,
     NovoProjetoComponent,
     EditarProjetoComponent,
-    DetalhesProjetoComponent
+    DetalhesProjetoComponent,
+    ProdutosComponent,
+    NovoProdutoComponent,
+    EditarProdutoComponent,
+    DetalhesProdutosComponent,
+    SobreComponent,
+    EditarSobreComponent,
+    ContatoComponent,
+    EditarContatoComponent
   ],
   imports: [
     BrowserModule,

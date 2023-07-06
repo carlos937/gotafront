@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Editar Contato</h4>
+</div>
+<div class="modal-body" [formGroup]="form">
+  <div class="row">
+    <div class="col">
+      <label>Endereço</label>
+      <input class="form-control" formControlName="endereco" type="text">
+    </div>
+    <div class="col">
+      <label>Link Instagram</label>
+      <input class="form-control" formControlName="linkInstagram" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Link Whatsapp</label>
+      <input class="form-control" formControlName="linkWhatsapp" type="text">
+    </div>
+    <div class="col">
+      <label>Link Youtube</label>
+      <input class="form-control" formControlName="linkYoutube" type="text">
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+  <button type="button" class="btn btn-outline-dark" (click)="Enviar()">Save</button>
+</div>

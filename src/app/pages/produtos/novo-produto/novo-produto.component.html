@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Adicionar Produto</h4>
+</div>
+<div class="modal-body" [formGroup]="form">
+  <div class="row">
+    <div class="col">
+      <label>Titulo</label>
+      <input class="form-control" formControlName="titulo" type="text">
+    </div>
+    <div class="col">
+      <label>Descrição</label>
+      <input class="form-control" formControlName="descricao" type="text">
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Valor</label>
+      <input class="form-control" formControlName="titulo" type="text">
+    </div>
+    <div class="col mt-2">
+      <select class="form-control select" formControlName="artistasId" multiple>
+        <option [value]="artista.id" *ngFor="let artista of artistas">{{artista.nome}}</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+  <button type="button" class="btn btn-outline-dark" (click)="Enviar()">Save</button>
+</div>

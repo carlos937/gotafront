@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Detalhes Produto</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <label>Titulo</label>
+      <label class="w-100 text-success" >{{itemSelecionado.titulo}}</label>
+    </div>
+    <div class="col">
+      <label>Descrição</label>
+      <label class="w-100 text-success" >{{itemSelecionado.descricao}}</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Valor</label>
+      <label class="w-100 text-success" >{{itemSelecionado.valor}}</label>
+    </div>
+    <div class="col">
+      <label>Artistas</label>
+      <label class="w-100 text-success" *ngFor="let artista of artistasSelecionados" >{{artista.nome}}</label>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+</div>

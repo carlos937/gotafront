@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Editar Sobre</h4>
+</div>
+<div class="modal-body" [formGroup]="form">
+  <div class="row">
+    <div class="col">
+      <label>Descrição</label>
+      <textarea class="form-control" formControlName="descricao"></textarea>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+  <button type="button" class="btn btn-outline-dark" (click)="Enviar()">Save</button>
+</div>

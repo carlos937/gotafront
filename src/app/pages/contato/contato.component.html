@@ -1,0 +1,33 @@
+<ng-template #editar>
+  <editar-contato
+    (editado)="buscar()"
+    [itemSelecionado]="contato"
+  ></editar-contato>
+</ng-template>
+ <table class="table mt-2 table-striped w-100">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Instagram</th>
+      <th scope="col">WhatsApp</th>
+      <th scope="col">Youtube</th>
+      <th scope="col">Data de Atualização</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="contato">
+      <td>{{ contato.id }}</td>
+      <td>{{ contato.endereco }}</td>
+      <td>{{ contato.linkInstagram }}</td>
+      <td>{{ contato.linkWhatsapp }}</td>
+      <td>{{ contato.linkYoutube }}</td>
+      <td>{{ contato.dataDeAtualizacao }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="open(editar)">
+          Editar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

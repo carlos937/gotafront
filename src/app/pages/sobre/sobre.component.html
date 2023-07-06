@@ -1,0 +1,22 @@
+<ng-template #editar>
+  <editar-sobre (editado)="buscar()" [itemSelecionado]="sobre"></editar-sobre>
+</ng-template>
+<table class="table mt-2 table-striped w-100">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Data de Atualização</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="sobre">
+      <td>{{ sobre.id }}</td>
+      <td>{{ sobre.descricao }}</td>
+      <td>{{ sobre.dataDeAtualizacao }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="open(editar)">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
